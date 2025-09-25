@@ -75,6 +75,11 @@ Config = {
             Image = "ammu",
             Jobs = { "ammu" },
         },
+        ["dessert"] = {
+            Label = "Dessert",
+            Image = "dessert",
+            Jobs = { "unicorn" },
+        },
     },
 
     PermanentItems = { -- Items that dont get removed when crafting
@@ -293,6 +298,22 @@ Config = {
                 ["ice"] = 1,
                 ["apple"] = 1,
                 ["kitchen_knife"] = 1,
+            },
+        },
+
+        ["cupcake"] = {
+            Level = 0,
+            Category = "dessert",
+            isGun = false,
+            Jobs = { "unicorn" },
+            JobGrades = {},
+            Amount = 1,
+            SuccessRate = 100,
+            requireBlueprint = false,
+            Time = 20,
+            Ingredients = {
+                ["water"] = 1,
+                ["flour"] = 1,
             },
         },
 
@@ -905,6 +926,24 @@ Config = {
                 ["hammer"] = 1,
             },
         },
+
+        ["axe"] = {
+            Level = 0,
+            Category = "tools",
+            isGun = false,
+            Jobs = { "import" },
+            JobGrades = {},
+            Amount = 1,
+            SuccessRate = 100,
+            requireBlueprint = false,
+            Time = 30,
+            Ingredients = {
+                ["recycled_plastic"] = 1,
+                ["iron"] = 1,
+                ["steel"] = 1,
+                ["hammer"] = 1,
+            },
+        },
     },
 
     Workbenches = { -- Every workbench location, leave {} for jobs if you want everybody to access
@@ -927,6 +966,7 @@ Config = {
                 "contract",
                 "flour",
                 "kitchen_knife",
+                "axe",
             },
             radius = 1.0,
         },
@@ -977,7 +1017,7 @@ Config = {
             coords = vector3(129.217590, -1283.802246, 29.263062),
             jobs = { "unicorn" },
             blip = false,
-            recipes = { "almondmilk", "fries", "grilled_salmon", "grilled_trout", "tuna_sandwich", "appledrink", "bread", "mixed_fried_fish" },
+            recipes = { "almondmilk", "fries", "grilled_salmon", "grilled_trout", "tuna_sandwich", "appledrink", "bread", "mixed_fried_fish", "cupcake" },
             radius = 1.0,
         },
         {
